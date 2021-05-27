@@ -45,9 +45,6 @@ toys.push(erectorSet);
 //     console.log(toy.name)
 // };
 
-// for (const toy of toys) {
-//     console.log(`This ${toy.name} was manufactured in ${toy.yearProduced} by ${toy.manufacturer}.`);
-// }
 
 toys[0].price = 120.99;
 toys[1].price = 45.55;
@@ -59,6 +56,18 @@ for (let toy of toys) {
     toy.price = toy.price * 1.05;
 }
 
+// for (let toy of toys) {
+//     console.log(`The new price of ${toy.name} is $${toy.price}.`);
+// }
+
+const toyToFind = 2;
+    
+// for (const toy of toys) {
+//     console.log(`This ${toy.name} was manufactured in ${toy.yearProduced} by ${toy.manufacturer}.`);
+// }
+
 for (let toy of toys) {
-    console.log(`The new price of ${toy.name} is $${toy.price}.`);
+    if (toy.id === toyToFind) {
+        console.log(`This ${toy.name} was manufactured in ${toy.yearProduced} by ${toy.manufacturer}.`);
+    }
 }
