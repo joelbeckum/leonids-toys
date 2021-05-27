@@ -26,7 +26,7 @@ const rayGun = {
     id: 4,
     name: "Buck Godot's Trusty Zapgun",
     pieces: 1,
-    manufacturer: "Gallimaufry, inc,",
+    manufacturer: "Gallimaufry, inc",
     yearProduced: 1982
 };
 
@@ -41,6 +41,10 @@ const erectorSet = {
 toys.push(rayGun);
 toys.push(erectorSet);
 
+// for (const toy of toys) {
+//     console.log(toy.name)
+// };
+
 for (const toy of toys) {
-    console.log(toy.name)
-};
+    console.log(`This ${toy.name} was manufactured in ${toy.yearProduced} by ${toy.manufacturer}.`);
+}
