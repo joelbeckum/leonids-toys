@@ -60,14 +60,35 @@ for (let toy of toys) {
 //     console.log(`The new price of ${toy.name} is $${toy.price}.`);
 // }
 
-const toyToFind = 2;
+// const toyToFind = 2;
     
 // for (const toy of toys) {
 //     console.log(`This ${toy.name} was manufactured in ${toy.yearProduced} by ${toy.manufacturer}.`);
 // }
 
-for (let toy of toys) {
-    if (toy.id === toyToFind) {
-        console.log(`This ${toy.name} was manufactured in ${toy.yearProduced} by ${toy.manufacturer}.`);
-    }
+// for (let toy of toys) {
+//     if (toy.id === toyToFind) {
+//         console.log(`This ${toy.name} was manufactured in ${toy.yearProduced} by ${toy.manufacturer}.`);
+//     }
+// }
+
+const trainSet = {
+    name: "Good Times Train Set",
+    pieces: 15,
+    manufacturer: "Good Times Toy Co",
+    yearProduced: 1979,
+    price: 250.45
 }
+
+const addToyToInv = (toyObject) => {
+    const lastIndex = toys.length - 1;
+    const currentLastToy = toys[lastIndex];
+    const maxId = currentLastToy.id;
+    const idForNewToy = maxId + 1;
+
+    toyObject.id = idForNewToy;
+    toys.push(toyObject);
+}
+
+addToyToInv(trainSet);
+console.log(toys);
